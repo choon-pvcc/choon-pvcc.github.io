@@ -1,0 +1,46 @@
+<!-- NAME: CHRISTOPHER HOON
+    Program PURPOSE: This webpage is all about buses.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+		  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang = "en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>School Field Trip Transportation</title>
+        <script type = "text/javascript">
+            function findNumBuses(){
+                //Variables
+                const MAXBUSRIDERS = 20;
+                var numriders = 0;
+                var numbuses = 0; 
+                var vanriders = 0;
+                var remainder = 0;
+
+                //Input from user
+                numriders = prompt("Enter the number of riders going on the field trip: ");
+
+                //Calculations
+                numbuses = Math.floor(numriders/maxbusriders);      //finding whole number quotient
+                remainder = numriders % maxbusriders;
+                if(remainder >= 0 && remainder < 6){
+                    vanriders = remainder;
+                }
+                else{
+                    numbuses++;
+                }
+
+                //Display results
+                document.write("<h1>School Field Trip Transportation Needs</h1>");
+                document.write("<h2>Total number of riders: " + numriders);
+                document.write("<hr><br />Number of buses needed:" + numbuses);
+                document.write("<br />School van needed for " + vanriders + " rider(s)</h2>");
+            }
+         </script>
+    </head>
+    <body>
+        <form>
+            <input type = "button" value ="Click here for arithmetic calculations"
+                           class = "calcbutton" onclick = "findNumBuses()" />
+        </form>
+    </body>
+</html>
