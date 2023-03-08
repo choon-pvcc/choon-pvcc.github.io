@@ -1,0 +1,57 @@
+<!-- NAME: CHRISTOPHER HOON
+    Program PURPOSE: This webpage is all about learning Javascript.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+		  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang = "en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>Simple Arithmetic</title>
+        <style>
+            body { background-color: #9c9b9f; 
+                  font-family: arial, helvetica, sans-serif;
+                  margin-top: 0px;
+                  margin-left: auto;
+                  margin-right: auto;
+            }
+         </style>
+
+         <script type = "text/javascript">
+            function calculate(){
+                //Variables
+                var num1, num2;
+                var addans;
+                var subans;
+                var multans;
+                var divans;
+                var modans;
+
+                //Input from user
+                num1 = prompt("Enter the first number: ");
+                num2 = prompt("Enter the second number: ");
+
+                //Mathematical Calculations
+                addans = num1 * 1 + num2 * 1;   //Multiplaction of 1 to force variable scoping to int
+                subans = num1 - num2;
+                multans = num1 * num2;
+                divans = num1 / num2;
+                modans = num1 % num2;
+
+                //Output results
+                document.write("<h1 style ='color: #7D3C98;'> Arithmetic Answers: " + "<br />");
+                document.write("Addition of " + num1 + " and " + num2 + " equals " + addans + "<br />");
+                document.write("<br>Subtraction of " + num1 + " and " + num2 + " equals " + subans + "<br />");
+                document.write("<br>Multiplication of " + num1 + " and " + num2 + " equals " + multans + "<br />");
+                document.write("<br>Division of " + num1 + " and " + num2 + " equals " + divans + "<br />");
+                document.write("<br>Modulus of " + num1 + " and " + num2 + " equals " + modans + "<br />");
+                document.write("</h2>");
+            }
+         </script>
+    </head>
+    <body>
+        <form>
+            <input type = "button" value ="Click here for arithmetic calculations"
+                           class = "calcbutton" onclick = "calculate()" />
+        </form>
+    </body>
+</html>
